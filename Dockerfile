@@ -26,10 +26,10 @@ RUN git --version
 RUN php -v
 
 # Check do we have access to git repository
-RUN git status
+# RUN git status
 
 # Check do we have access to git repository
-RUN git branch
+# RUN git branch
 
 # Run Ziploy
 # RUN ziploy
