@@ -20,7 +20,7 @@ RUN echo "date.timezone=Europe/London" > /etc/php/7.2/cli/conf.d/date_timezone.i
 WORKDIR /tmp
 
 # Check git version
-RUN git -v
+RUN git --version
 
 # Check php version
 RUN php -v
