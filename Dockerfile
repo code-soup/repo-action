@@ -18,18 +18,3 @@ RUN echo "date.timezone=Europe/London" > /etc/php/7.2/cli/conf.d/date_timezone.i
 
 # Goto temporary directory.
 WORKDIR /tmp
-
-# Check git version
-RUN git --version
-
-# Check php version
-RUN php -v
-
-# Check do we have access to git repository
-# RUN git status
-
-# Check do we have access to git repository
-# RUN git branch
-
-# Run Ziploy
-# RUN ziploy

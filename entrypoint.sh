@@ -6,4 +6,4 @@ time=$(date)
 echo "::set-output name=time::$time"
 
 # tree current directory
-ls -al
+echo ls -al
