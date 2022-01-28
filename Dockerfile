@@ -20,10 +20,16 @@ RUN echo "date.timezone=Europe/London" > /etc/php/7.2/cli/conf.d/date_timezone.i
 WORKDIR /tmp
 
 # Check git version
-RUN echo git -v
+RUN git -v
 
 # Check php version
-RUN echo php -v
+RUN php -v
+
+# Check do we have access to git repository
+RUN git status
+
+# Check do we have access to git repository
+RUN git branch
 
 # Run Ziploy
-RUN echo ziploy
+RUN ziploy
