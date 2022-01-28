@@ -32,4 +32,4 @@ RUN git status
 RUN git branch
 
 # Run Ziploy
-RUN ziploy
+# RUN ziploy
