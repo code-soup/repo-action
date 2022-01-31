@@ -1,6 +1,10 @@
 # action.yml
 name: 'Ziploy'
 description: 'Automate WordPress project deployment with ziploy'
+author: Vlado Bosnjak <hi@codesoup.co>
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  steps:
+    - name: List Files
+      run: ls -al
