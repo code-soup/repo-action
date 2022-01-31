@@ -2,9 +2,22 @@
 name: 'Ziploy'
 description: 'Automate WordPress project deployment with ziploy'
 author: Vlado Bosnjak <hi@codesoup.co>
+inputs:
+  id:  # id of input
+    description: 'Who to greet'
+    required: false
+    default: 'World'
+  host:  # id of input
+    description: 'Who to greet'
+    required: false
+    default: 'World'
+  secret:  # id of input
+    description: 'Who to greet'
+    required: false
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  steps:
-    - name: List Files
-      run: ls -al

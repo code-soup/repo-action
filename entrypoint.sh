@@ -1,9 +1,9 @@
 #!/bin/sh -l
 
 # Test
-echo "Hello"
+echo "ID: $1"
+echo "Host: $2"
+echo "Secert: $3"
+
 time=$(date)
 echo "::set-output name=time::$time"
-
-# tree current directory
-echo ls -al
