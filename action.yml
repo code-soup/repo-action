@@ -1,16 +1,16 @@
 # action.yml
-name: 'Ziploy'
-description: 'Automate WordPress project deployment with ziploy'
+name: 'Secret Job'
+description: 'Testing inputs'
 author: Vlado Bosnjak <hi@codesoup.co>
 inputs:
   host:  # id of input
     description: 'Who to greet'
-    required: false
-    default: 'World'
+    required: true
+    default: 'my-host'
   secret:  # id of input
     description: 'Who to greet'
-    required: false
-    default: 'World'
+    required: true
+    default: 'my-secret'
 runs:
   using: 'docker'
   image: 'Dockerfile'
