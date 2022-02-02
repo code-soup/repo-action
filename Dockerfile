@@ -1,6 +1,6 @@
-# FROM codesoup/pumpkin:latest
+FROM codesoup/pumpkin:latest
 
-FROM ubuntu:latest
+# FROM ubuntu:latest
 
 MAINTAINER Vlado Bosnjak <hi@codesoup.co>
 
@@ -13,10 +13,10 @@ MAINTAINER Vlado Bosnjak <hi@codesoup.co>
 # Ensure UTF-8
 ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
-# RUN locale-gen en_US.UTF-8
+RUN locale-gen en_US.UTF-8
 
 # Timezone & memory limit
-# RUN echo "date.timezone=Europe/London" > /etc/php/7.2/cli/conf.d/date_timezone.ini && echo "memory_limit=1G" >> /etc/php/7.2/apache2/php.ini
+RUN echo "date.timezone=Europe/London" > /etc/php/7.2/cli/conf.d/date_timezone.ini && echo "memory_limit=1G" >> /etc/php/7.2/apache2/php.ini
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
