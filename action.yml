@@ -6,11 +6,11 @@ inputs:
   host:  # id of input
     description: 'Who to greet'
     required: true
-    default: 'my-host'
+    default: 'my-default-host'
   secret:  # id of input
     description: 'Who to greet'
     required: true
-    default: 'my-secret'
+    default: 'my-default-secret'
 runs:
   using: 'docker'
   image: 'Dockerfile'
