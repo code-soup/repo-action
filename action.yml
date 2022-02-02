@@ -7,6 +7,10 @@ inputs:
     description: 'Who to greet'
     required: false
     default: 'World'
+  secret:  # id of input
+    description: 'Who to greet'
+    required: false
+    default: 'World'
 runs:
   using: 'docker'
   image: 'Dockerfile'
