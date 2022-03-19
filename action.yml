@@ -1,16 +1,23 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Ziploy'
+description: 'Deploy WordPress Theme or Plugin directly from github to any hosting'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  ziploy-id:  # id of ziploy
+    description: 'Ziploy ID'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+
+  ziploy-host:
+    description: 'Web address where to deploy'
+    required: true
+
+  ziploy-secert:
+    description: 'Zeploy Secret'
+    required: true
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.ziploy-id }}
+    - ${{ inputs.ziploy-host }}
+    - ${{ inputs.ziploy-secert }}
