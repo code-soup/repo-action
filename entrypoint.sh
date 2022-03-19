@@ -4,9 +4,6 @@ echo "Ziploy ID $1"
 echo "Ziploy host $2"
 echo "Ziploy secret $3"
 
-time=$(date)
-echo "::set-output name=time::$1"
-
 # Download latest CLI
 curl -o ziploy https://raw.githubusercontent.com/code-soup/ziploy-cli/master/ziploy
 
@@ -14,4 +11,4 @@ curl -o ziploy https://raw.githubusercontent.com/code-soup/ziploy-cli/master/zip
 chmod u+x ./ziploy
 
 # Run
-./ziploy "${1}" "${3}" "${2}"
+./ziploy "$1" "$3" "$2"
