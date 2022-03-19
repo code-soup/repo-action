@@ -14,4 +14,4 @@ curl -o ziploy https://raw.githubusercontent.com/code-soup/ziploy-cli/master/zip
 chmod u+x ./ziploy
 
 # Run
-./ziploy $1 $3 $2
+./ziploy "${1}" "${3}" "${2}"
