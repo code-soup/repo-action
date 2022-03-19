@@ -10,7 +10,7 @@ inputs:
     description: 'Web address where to deploy'
     required: true
 
-  ziploy-secert:
+  ziploy-secret:
     description: 'Zeploy Secret'
     required: true
 
@@ -20,4 +20,4 @@ runs:
   args:
     - ${{ inputs.ziploy-id }}
     - ${{ inputs.ziploy-host }}
-    - ${{ inputs.ziploy-secert }}
+    - ${{ inputs.ziploy-secret }}
