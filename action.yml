@@ -1,23 +1,23 @@
 # action.yml
-name: 'Ziploy'
-description: 'Deploy WordPress Theme or Plugin directly from github to any hosting'
+name: "Ziploy2"
+description: "Deploy WordPress Theme or Plugin directly from github to any hosting"
 inputs:
-  ziploy-id:  # id of ziploy
-    description: 'Ziploy ID'
-    required: true
+    ziploy-id: # id of ziploy
+        description: "Ziploy ID"
+        required: true
 
-  ziploy-host:
-    description: 'Web address where to deploy'
-    required: true
+    ziploy-host:
+        description: "Web address where to deploy"
+        required: true
 
-  ziploy-secret:
-    description: 'Zeploy Secret'
-    required: true
+    ziploy-secret:
+        description: "Zeploy Secret"
+        required: true
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.ziploy-id }}
-    - ${{ inputs.ziploy-host }}
-    - ${{ inputs.ziploy-secret }}
+    using: "docker"
+    image: "Dockerfile"
+    args:
+        - ${{ inputs.ziploy-id }}
+        - ${{ inputs.ziploy-host }}
+        - ${{ inputs.ziploy-secret }}
